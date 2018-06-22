@@ -1,0 +1,11 @@
+<p>
+  request-donar works!
+</p>
+<input type="text" name='availableGroup' [(ngModel)]='availableGroup'>
+
+<app-send-donar [requiredGroup]='availableGroup' (availableDonors)="onChange($event)"></app-send-donar>
+
+
+<ol>
+  <li *ngFor='let donar of willingDonars'>{{donar}}</li>
+</ol>
